@@ -2,37 +2,46 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <title>HTML Academy: CatEnergy</title>
   </head>
   <body class="page-body">
-    <header class="page-header">
-      <div class="page-header__logo logo">
-        <a class="logo__link" href="index.html">
-          <img class="logo__image" src="/source/img/logo-mobile.svg" width="33.3" height="37.6" alt="Логотип">
-        </a>
-        <a class="logo__link" href="index.html">
-          <img class="logo__text" src="/source/img/logo-header.svg" width="101" height="18" alt="КэтЭнерджи">
+    <header class="page-header header">
+    
+      <div class="header__logo logo">
+        <a class="logo__link" href="#">
+          <img class="logo__image" src="img/Mobile/logo-mobile.svg" width="33.3" height="37.6" alt="Логотип Кэт Энерджи">
         </a>
       </div>
-
-      <nav class="page-header__nav header-nav">
-        <button class="header-nav__toggle" type="button">
-          <span class="visually-hidden">Отрыть меню</span>
+  
+      <div class="header__logo logo">
+        <a class="logo__link" href="#">
+          <img class="logo__text" src="img/Mobile/footer-logo2.svg" width="101" height="18" alt="Логотип Кэт Энерджи">
+        </a>
+      </div>
+  
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="header-nav__wrapper site">
-          <ul class="header-nav__list site__list">
-            <li class="header-nav__item site__item">
-              <a class="site-link " href="index.html">
+  
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list visually-hidden">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active" href="index.html" >
                 Главная
               </a>
             </li>
-            <li class="header-nav__item site__item">
-              <a class="site__link" href="catalog.html">
+            <li class="main-naiv__item">
+              <a class="main-nav__link" href="catalog.html" >
                 Каталог продукции
               </a>
             </li>
-            <li class="header-nav__item site__item">
-              <a class="site__link site__link--active" href="form.html">
+            <li class="main-naiv__item">
+              <a class="main-nav__link" href="form.html" >
                 Подбор программы
               </a>
             </li>
@@ -41,33 +50,38 @@
       </nav>
     </header>
 
-    <main class="form-main">
+    <main class="page-main">
       <h1 class="visually-hidden">Страница заказа питания Кэт Энерджи</h1>
       
-      <section class="form-main__title form">
+      <section class="form-main">
         <div class="form-main__wrapper">
-          <h2 class="form__title">Подбор программы</h2>
-          <p class="form__description">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
+          <h2 class="form-main__title">Подбор программы</h2>
+          <p class="form-main__description">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
         
 
           <form class="form-main__form form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="form__cat-info">
-              <legend class="form__fieldset--title visually-hidden">Расскажите о вашем Коте</legend>
-              <label class="form__label" for="name">ИМЯ:*
-                <input class="form__field"  type="text" placeholder="БАРСИК>" id="name" name="name">
-              </label>
+              <legend class="visually-hidden">Расскажите о вашем Коте</legend>
               
-              <label class="form__label" for="weight">Вес (кг):*
-                <input class="form__field"  type="number" placeholder="7" id="weight" name="weight">
-              </label>
-              
-              <label class="form__label" for="age">Возраст (лет):
-                <input class="form__field"  type="number" placeholder="7" id="age" name="age">
-              </label>
+              <div class="cat-info__fields">
+                <label class="form__label" for="name">ИМЯ:*</label>
+                <input class="form__field"  type="text" placeholder="БАРСИК" id="name" name="name">
+              </div>
+
+              <div class="cat-info__fields">
+               <label class="form__label" for="weight">Вес (кг):*</label>
+               <input class="form__field"  type="number" placeholder="7" id="weight" name="weight">
+              </div>
+
+              <div class="cat-info__fields">
+               <label class="form__label" for="age">Возраст (лет): </label>
+               <input class="form__field"  type="number" placeholder="7" id="age" name="age">
+              </div>
+
             </fieldset>
 
             <fieldset class="form__cat-action">
-              <legend class="form__fieldset--title visually-hidden">Выберите, что будем делать</legend>
+              <legend class="visually-hidden">Выберите, что будем делать</legend>
               <label class="form__label">
                 <input type="radio" name="cat-action" value="lose-weight" checked>похудение
               </label>
@@ -81,42 +95,45 @@
               </label>
             </fieldset>
 
-            <fieldset class="form__owners-contacts">
-              <legend class="form__fieldset--title">Контактные данные (владельца кота)</legend>
+            <fieldset class="form__cat-owners owners">
+              <legend class="lehend__title owners__title">Контактные данные (владельца кота)</legend>
               
-              <label class="form__label" for="email">E-mail:*
+              <div class="owners__fields">
+                <label class="form__label" for="email">E-mail:*</label>
                 <input class="form__field"  type="email" placeholder="кuklachev@gmail.com" id="email" name="email">
-              </label>
+              </div>
 
-              <label class="form__label" for="phone">Телефон:*
+              <div class="owners__fields">
+                <label class="form__label" for="phone">Телефон:*</label>
                 <input class="form__field"  type="number" placeholder="8 (960) 900-60-90" id="phone" name="phone">
-              </label>
+              </div>
 
             </fieldset>
 
             <fieldset class="form__comments">
-              <legend class="form__fieldset--title">Комментарий</legend>
+              <legend class="legend__title comments__title">Комментарий</legend>
                 <textarea class="form__comments--text" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea> 
             </fieldset>
 
             <fieldset class="form__addon">
-              <legend class="form__fieldset--title">Дополнительно</legend>
-              
-              <label class="form__label">
-                <input class="form__checkbox" type="checkbox" name="+sugar" checked>Cахарозаменитель
-              </label>
+              <legend class="legend__title addon__title">Дополнительно</legend>
+              <div class="addon__input">
+                <label class="form__label">
+                  <input class="form__checkbox" type="checkbox" name="+sugar" checked>Cахарозаменитель
+                </label>
 
-              <label class="form__label">
-                <input class="form__checkbox" type="checkbox" name="+water">питьевая вода
-              </label>
+                <label class="form__label">
+                  <input class="form__checkbox" type="checkbox" name="+water">питьевая вода
+                </label>
 
-              <label class="form__label">
-                <input class="form__checkbox" type="checkbox" name="+milk">молоко
-              </label>
+                <label class="form__label">
+                  <input class="form__checkbox" type="checkbox" name="+milk">молоко
+                </label>
 
-              <label class="form__label">
-                <input class="form__checkbox" type="checkbox" name="vitamins">витамины
-              </label>
+                <label class="form__label">
+                  <input class="form__checkbox" type="checkbox" name="vitamins">витамины
+                </label>
+              </div>
 
             </fieldset>
 
@@ -128,14 +145,14 @@
 
 
       <section class="main-contacts contacts">
-        <div class="contacts-_wrapper">
+        <div class="contacts__wrapper">
           <h2 class="visually-hidden">Наши контакты</h2>
           <div class="contacts__description">
-            <b class="contacts__title">приглашаем<br>к сотрудничеству<br>дилеров!</b>
-            <p class="contacts__text">ул. Большая<br>Конюшенная, д. 19/8<br><br>Санкт-Петербург</p>
+            <p class="contacts__title">приглашаем<br>к сотрудничеству<br>дилеров!</p>
+            <p class="contacts__text">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</p>
           </div>
-          <img class="contacts__map" src="img/Mobile/map.jpg" width="320" height="362" alt="картак, как можно найти офис cat Energy">
         </div>
+        <img class="contacts__map" src="img/Mobile/map.jpg" width="320" height="362" alt="картак, как можно найти офис cat Energy">
       </section>
     </main>
 
@@ -144,7 +161,7 @@
     <footer class="page-footer">
       <div class="footer__wrapper">
         <div class="footer__logo">
-          <img class="footer__logo--image" src="img/Mobile/footer-logo 2.svg" width="128" height="24" alt="логотип Cat Energy">
+          <img class="footer__logo_image" src="img/Mobile/footer-logo2.svg" width="128" height="24" alt="логотип Cat Energy">
         </div>
         <ul class="footer__social social__list">
           <li class="social__item">
@@ -158,7 +175,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="vkontakte.ru">
+            <a class="social__link" href="instagram.com">
               <span class="visually-hidden">Мы В Инстаграм</span>
               <span class="social__logo vkontakte">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -170,17 +187,17 @@
                   <rect width="16" height="16" fill="white"/>
                   </clipPath>
                   </defs>
-                  </svg>
+                </svg>
               </span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="vkontakte.ru">
+            <a class="social__link" href="facebook.com">
               <span class="visually-hidden">Мы В фейсбуке</span>
               <span class="social__logo vkontakte">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M16.5 1.83325H13.75C12.5344 1.83325 11.3686 2.30674 10.5091 3.14957C9.64956 3.99239 9.16667 5.1355 9.16667 6.32743V9.02394H6.41667V12.6193H9.16667V19.81H12.8333V12.6193H15.5833L16.5 9.02394H12.8333V6.32743C12.8333 6.08905 12.9299 5.86042 13.1018 5.69186C13.2737 5.52329 13.5069 5.4286 13.75 5.4286H16.5V1.83325Z" stroke="#666666" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
+                </svg>
               </span>
             </a>
           </li>
@@ -188,8 +205,8 @@
   
         <div class="developer__contacts">
           <a class="developer__link" href="https://htmlacademy.ru">
-            <p class="developer__text">HTML Academy</p>
-            <p class="developer__logo">
+            <div class="developer__text">HTML Academy</div>
+            <div class="developer__logo">
               <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_95_230)">
                 <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>
@@ -199,8 +216,8 @@
                 <rect width="27" height="34" fill="white"/>
                 </clipPath>
                 </defs>
-                </svg>
-            </p>
+              </svg>
+            </div>
           </a>
         </div>
       </div>
