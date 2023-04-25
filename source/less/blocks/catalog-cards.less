@@ -1,72 +1,78 @@
-.catalog__wrapper {
-    // .wrapper;
-    .catalog__list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        grid-template-columns: 1fr;
-        .catalog__item {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            .catalog__image {
-                justify-self: center;
-                align-self: center;
-            }
-            .catalog__item_description {
-                display: grid;
-                grid-template-columns: 50% 50%;
-                .catalog__title {
-                    grid-column: 1 / -1;
-                    .font-oswald;
-                    font-size: 16px;
-                    line-height: 20px;
-                    text-transform: uppercase;
-                    max-width: 80px;
-                }
-                .card__net {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    // column-gap: 20px;
-                    color: #444444;
-                    .card-termin {
-                        grid-column: 1 / 2;
-                    }
-                    .card-description {
-                        grid-column: 2 / 3;
-                        justify-self: center;
-                    }
-                    
-                }
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+}
 
-            }
-            .button__order {
-                min-width: 100%;
-                grid-column: 1 / -1;
-            }
-        }
-        .catalog__more {
-            min-width: 100%;
-            margin: 0;
-            padding: 0;
-            .catalog__more_title {
-                .font-oswald;
-                text-align: center;
-                line-height: 20px;
-                text-transform: uppercase;
-            }
-            .catalog__more_text {
-                .font-arial;
-                font-size: 12px;
-                line-height: 16px;
-                color: #444444;
-                text-align: center;
-            }
-            .show__more {
-                min-width: 100%;
-                background-color: #f2f2f2;
-                color: #444444;
-            }
-        }
-    }
+.catalog__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.catalog__image {
+  justify-self: center;
+  align-self: center;
+}
+
+.catalog__item_description {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.catalog__title {
+  grid-column: 1 / -1;
+  .font-oswald;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  max-width: 80px;
+}
+
+.card__net {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #444444;
+}
+
+.card-termin {
+  grid-column: 1 / 2;
+}
+
+.card-description {
+  grid-column: 2 / 3;
+  justify-self: center;
+}
+
+.button__order {
+  min-width: 100%;
+  grid-column: 1 / -1;
+}
+
+.catalog__more {
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__more_title {
+  .font-oswald;
+  text-align: center;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.catalog__more_text {
+  .font-arial;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+  text-align: center;
+}
+
+.show__more {
+  min-width: 100%;
+  background-color: #f2f2f2;
+  color: #444444;
 }

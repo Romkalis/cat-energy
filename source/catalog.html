@@ -10,38 +10,32 @@
 </head>
 <body>
   <header class="page-header header">
-    
     <div class="header__logo logo">
       <a class="logo__link" href="#">
         <img class="logo__image" src="img/Mobile/logo-mobile.svg" width="33.3" height="37.6" alt="Логотип Кэт Энерджи">
-      </a>
-    </div>
-
-    <div class="header__logo logo">
-      <a class="logo__link" href="#">
         <img class="logo__text" src="img/Mobile/footer-logo2.svg" width="101" height="18" alt="Логотип Кэт Энерджи">
       </a>
     </div>
 
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
 
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list visually-hidden">
+    <nav class="main-nav main-nav--active">
+      <div class="main-nav__wrapper wrapper">
+        <ul class="main-nav__list site-list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active" href="index.html" >
+            <a class="main-nav__link main-nav__link--active" href="./index.html" >
               Главная
             </a>
           </li>
-          <li class="main-naiv__item">
-            <a class="main-nav__link" href="catalog.html" >
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="./catalog.html" >
               Каталог продукции
             </a>
           </li>
-          <li class="main-naiv__item">
-            <a class="main-nav__link" href="form.html" >
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="./form.html" >
               Подбор программы
             </a>
           </li>
@@ -140,7 +134,7 @@
               </div>
               <a class="button__order button" href="#"> заказать</a>
             </li>
-            
+
             <li class="catalog__item">
               <img class="catalog__image" src="img/Mobile/catalog/catalog-4-desktop.png" alt="">
               <div class="catalog__item_description catalog-card">
@@ -193,7 +187,7 @@
                     400 Р.
                   </dd>
                 </dl>
-              </div>  
+              </div>
               <a class="button__order button" href="#"> заказать</a>
             </li>
 
@@ -256,7 +250,7 @@
             <li class="catalog__more">
               <p class="catalog__more_title">Показать еще 100500 товаров</p>
               <p class="catalog__more_text">На самом деле вкусов гораздо больше!</p>
-              
+
               <a class="show__more button" href="#">показать все</a>
             </li>
           </ul>
@@ -264,17 +258,17 @@
       </section>
 
       <section class="additionals">
-        <div class="additionals__wrapper">
+        <div class="additionals__wrapper wrapper">
           <h2 class="section__title additionals__title">Дополнительные товары</h2>
 
           <ul class="additionals__list">
-            
+
             <li class="additional__item">
               <p class="addititonal__title">Сахарозаменитель</p>
               <div class="addititonal__description">
                 <p class="addititonal__text">1 упаковка (100 г)</p>
                 <p class="addititonal__price">200 Р.</p>
-              </div>  
+              </div>
               <a class="button__order button" href="">заказать</a>
             </li>
 
@@ -283,7 +277,7 @@
               <div class="addititonal__description">
                 <p class="addititonal__text">5 литров</p>
                 <p class="addititonal__price">50 Р.</p>
-              </div>  
+              </div>
               <a class="button__order button" href="">заказать</a>
             </li>
 
@@ -292,7 +286,7 @@
               <div class="addititonal__description">
                 <p class="addititonal__text">1 литр</p>
                 <p class="addititonal__price">100 Р.</p>
-              </div>  
+              </div>
               <a class="button__order button" href="">заказать</a>
             </li>
 
@@ -301,7 +295,7 @@
               <div class="addititonal__description">
                 <p class="addititonal__text">1 упаковка (30 г)</p>
                 <p class="addititonal__price">300 Р.</p>
-              </div>  
+              </div>
               <a class="button__order button" href="">заказать</a>
             </li>
           </ul>
@@ -329,24 +323,28 @@
       </section>
 
       <section class="main-contacts contacts">
-        <div class="contacts__wrapper">
+        <div class="contacts__wrapper wrapper">
           <h2 class="visually-hidden">Наши контакты</h2>
           <div class="contacts__description">
             <p class="contacts__title">приглашаем<br>к сотрудничеству<br>дилеров!</p>
-            <p class="contacts__text">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</p>
+            <div class="contacts__text--wrapper">
+              <p class="contacts__text">ул. Большая<br>Конюшенная, д. 19/8</p>
+              <p class="contacts__text">Санкт-Петербург</p>
+            </div>
           </div>
         </div>
         <img class="contacts__map" src="img/Mobile/map.jpg" width="320" height="362" alt="картак, как можно найти офис cat Energy">
       </section>
     </div>
   </main>
-    
+
   <footer class="page-footer">
-    <div class="footer__wrapper">
-      <div class="footer__logo">
+    <div class="footer__wrapper wrapper">
+      <div class="footer__logo footer__item">
         <img class="footer__logo_image" src="img/Mobile/footer-logo2.svg" width="128" height="24" alt="логотип Cat Energy">
       </div>
-      <ul class="footer__social social__list">
+      <div class="footer__item footer__item__wrapper">
+        <ul class="footer__social social__list">
         <li class="social__item">
           <a class="social__link" href="vkontakte.ru">
             <span class="visually-hidden">Мы ВКонтакте</span>
@@ -384,9 +382,9 @@
             </span>
           </a>
         </li>
-      </ul>
-
-      <div class="developer__contacts">
+        </ul>
+      </div>
+      <div class="developer__contacts footer__item">
         <a class="developer__link" href="https://htmlacademy.ru">
           <div class="developer__text">HTML Academy</div>
           <div class="developer__logo">
@@ -405,6 +403,6 @@
       </div>
     </div>
   </footer>
-    
+
 </body>
 </html>

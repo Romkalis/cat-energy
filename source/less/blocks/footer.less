@@ -1,57 +1,79 @@
+.footer {
+  .wrapper;
+}
+
 .footer__wrapper {
-    .wrapper;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-    
-    .footer__logo {
-        display: flex;
-        align-items: center;
-        min-width: 100%;
-        margin: 39px auto 0px;
-        border-bottom: 1px solid #d9d9d9;
-        .footer__logo_image {
-            margin: auto;
-            margin-bottom: 32px;
-        }
-    }
+  .wrapper;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
-    .social__list {
-        margin: 0;
-        padding: 0;
-        margin-top: 20px;
-        display: flex;
-        min-width: 100%;
-        list-style: none;
-        justify-content: center;
-        flex-wrap: wrap;
-        border-bottom: 1px solid #d9d9d9;
-        .social__link {
-            display: flex;
-            min-width: 45px;
-            height: 40px;
-            padding: auto 18px;
-            margin-bottom: 21px;
-            .social__logo {
-                margin: auto;
-            }
-        }
-    }
-    .developer__contacts {
-        min-width: 100%;
-        margin-top: 20px;
-        .developer__link {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-decoration: none;  
-            .developer__text {
-                .font-arial;
-                color: #444444;
-            }
-        }
-    }
+.footer__item {
+  position: relative;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    min-width: 150px;
+  }
+}
+
+.footer__logo_image {
+  margin: auto;
+}
+
+.social__list {
+  .indent0;
+  // width: 90vw;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    min-width: 160px;
+    border: none;
+  }
+}
+
+.social__link {
+  .indent0;
+  display: flex;
+  min-width: 45px;
+  height: 40px;
+  padding: auto 18px;
+}
+
+.social__logo {
+  margin: auto;
+}
+
+.developer__link {
+  .indent0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  // min-width: 90vw;
+
+  @media (min-width: @tablet-width) {
+    min-width: 163px;
+  }
+}
+
+.developer__text {
+  .font-arial;
+  color: #444444;
 }

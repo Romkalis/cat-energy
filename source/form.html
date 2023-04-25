@@ -10,38 +10,32 @@
   </head>
   <body class="page-body">
     <header class="page-header header">
-    
       <div class="header__logo logo">
         <a class="logo__link" href="#">
           <img class="logo__image" src="img/Mobile/logo-mobile.svg" width="33.3" height="37.6" alt="Логотип Кэт Энерджи">
-        </a>
-      </div>
-  
-      <div class="header__logo logo">
-        <a class="logo__link" href="#">
           <img class="logo__text" src="img/Mobile/footer-logo2.svg" width="101" height="18" alt="Логотип Кэт Энерджи">
         </a>
       </div>
-  
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-  
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list visually-hidden">
+
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+
+      <nav class="main-nav main-nav--active">
+        <div class="main-nav__wrapper wrapper">
+          <ul class="main-nav__list site-list">
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active" href="index.html" >
+              <a class="main-nav__link main-nav__link--active" href="./index.html" >
                 Главная
               </a>
             </li>
-            <li class="main-naiv__item">
-              <a class="main-nav__link" href="catalog.html" >
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="./catalog.html" >
                 Каталог продукции
               </a>
             </li>
-            <li class="main-naiv__item">
-              <a class="main-nav__link" href="form.html" >
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="./form.html" >
                 Подбор программы
               </a>
             </li>
@@ -52,17 +46,17 @@
 
     <main class="page-main">
       <h1 class="visually-hidden">Страница заказа питания Кэт Энерджи</h1>
-      
+
       <section class="form-main">
         <div class="form-main__wrapper">
           <h2 class="form-main__title">Подбор программы</h2>
           <p class="form-main__description">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
-        
+
 
           <form class="form-main__form form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="form__cat-info">
               <legend class="visually-hidden">Расскажите о вашем Коте</legend>
-              
+
               <div class="cat-info__fields">
                 <label class="form__label" for="name">ИМЯ:*</label>
                 <input class="form__field"  type="text" placeholder="БАРСИК" id="name" name="name">
@@ -97,7 +91,7 @@
 
             <fieldset class="form__cat-owners owners">
               <legend class="lehend__title owners__title">Контактные данные (владельца кота)</legend>
-              
+
               <div class="owners__fields">
                 <label class="form__label" for="email">E-mail:*</label>
                 <input class="form__field"  type="email" placeholder="кuklachev@gmail.com" id="email" name="email">
@@ -112,7 +106,7 @@
 
             <fieldset class="form__comments">
               <legend class="legend__title comments__title">Комментарий</legend>
-                <textarea class="form__comments--text" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea> 
+                <textarea class="form__comments--text" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
 
             <fieldset class="form__addon">
@@ -145,25 +139,29 @@
 
 
       <section class="main-contacts contacts">
-        <div class="contacts__wrapper">
+        <div class="contacts__wrapper wrapper">
           <h2 class="visually-hidden">Наши контакты</h2>
           <div class="contacts__description">
             <p class="contacts__title">приглашаем<br>к сотрудничеству<br>дилеров!</p>
-            <p class="contacts__text">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</p>
+            <div class="contacts__text--wrapper">
+              <p class="contacts__text">ул. Большая<br>Конюшенная, д. 19/8</p>
+              <p class="contacts__text">Санкт-Петербург</p>
+            </div>
           </div>
         </div>
         <img class="contacts__map" src="img/Mobile/map.jpg" width="320" height="362" alt="картак, как можно найти офис cat Energy">
       </section>
     </main>
 
-    
-  
+
+
     <footer class="page-footer">
       <div class="footer__wrapper">
-        <div class="footer__logo">
+        <div class="footer__logo footer__item">
           <img class="footer__logo_image" src="img/Mobile/footer-logo2.svg" width="128" height="24" alt="логотип Cat Energy">
         </div>
-        <ul class="footer__social social__list">
+        <div class="footer__item footer__item__wrapper">
+          <ul class="footer__social social__list">
           <li class="social__item">
             <a class="social__link" href="vkontakte.ru">
               <span class="visually-hidden">Мы ВКонтакте</span>
@@ -201,9 +199,9 @@
               </span>
             </a>
           </li>
-        </ul>
-  
-        <div class="developer__contacts">
+          </ul>
+        </div>
+        <div class="developer__contacts footer__item">
           <a class="developer__link" href="https://htmlacademy.ru">
             <div class="developer__text">HTML Academy</div>
             <div class="developer__logo">
