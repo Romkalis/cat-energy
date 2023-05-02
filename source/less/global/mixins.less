@@ -1,5 +1,4 @@
 //    FONTS
-
 .font-arial {
   font-family: "Arial", serif;
   font-size: 14px;
@@ -19,19 +18,16 @@
   padding: 0;
 }
 
-//wrapper
+//indent-adaptive
 
-.wrapper {
-  margin: 0;
+.indent-adaptive {
   padding: 0 20px;
 
-  // @media (min-width: @tablet-width) {
-  //   padding: 0 30px;
-  //   max-width: 1080px;
-  // }
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
 
-  // @media (min-width: @desktop-width) {
-  //   padding: 0 130px;
-  //   max-width: 1220px;
-  // }
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
 }

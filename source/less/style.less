@@ -1,34 +1,50 @@
-// Начните писать стили здесь
-
-@import url("./global/global_rules.less");
-@import url("./global/button.less");
-@import url("./global/mixins.less");
+@import url("normalize.css");
+//fonts
 @import url("./global/fonts.less");
+
+//variable
 @import url("./global/variables.less");
 
-//header
+//mixin
+@import url("./global/mixins.less");
+@import url("./global/visually-hidden.less");
 
+
+//BLOCKS
+@import url("./blocks/button.less");
+@import url("./blocks/page__body.less");
+@import url("./blocks/page.less");
+
+
+//HEADER
 @import url("./blocks/header.less");
 
-//footer
-@import url("./blocks/footer.less");
-
-//contacts
-@import url("./blocks/contacts.less");
-
-//INDEX
+//MAIN
 @import url("./blocks/page-main.less");
+
+//FOOTER
+@import url("./blocks/page__footer.less");
+
+//INDEX MAIN
 @import url("./blocks/promo.less");
-@import url("./blocks/itworks.less");
+@import url("./blocks/catalog-section.less");
+@import url("./blocks/process.less");
 @import url("./blocks/example.less");
-@import url("./blocks/results.less");
+@import url("./blocks/page-main__footer.less");
 
 //FORM
 
-@import url("./blocks/form-main.less");
-@import url("./blocks/form.less");
-
+@import url("./blocks/page-form.less");
 
 //CATALOG
-@import url("./blocks/page-catalog.less");
-@import url("./blocks/catalog-cards.less");
+
+@import url("./blocks/card.less");
+@import url("./blocks/show-more.less");
+@import url("./blocks/offer.less");
+@import url("./blocks/catalog-additionals.less");
+
+
+@import url("./blocks/page-main__section.less");
+
+
+@import url("./blocks/test.less");

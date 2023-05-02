@@ -5,14 +5,14 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.0",
-    "browser-sync": "2.27.7",
-    "gulp": "^4.0.2",
+    "browser-sync": "^2.29.1",
+    "gulp": "^3.9.1",
     "gulp-less": "5.0.0",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
     "postcss": "8.3.11",
-    "stylelint": "13.13.1",
-    "stylelint-config-htmlacademy": "0.1.11"
+    "stylelint": "^15.6.0",
+    "stylelint-config-htmlacademy": "^0.1.6"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -39,5 +39,8 @@
   "engines": {
     "node": "^16"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "gulp-cli": "^2.3.0"
+  }
 }

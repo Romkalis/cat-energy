@@ -1,0 +1,44 @@
+.page-footer {
+  flex-shrink: 0;
+  .indent-adaptive;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: @color-lightgrey;
+}
+
+.logo {
+  padding: 39px 0 32px;
+}
+
+.social {
+  .indent0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 33px);
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  border-top: 1px solid @color-grey-d9;
+  border-bottom: 1px solid @color-grey-d9;
+}
+
+.social__item {
+  padding: 22px;
+}
+
+.developer__link {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .font-arial;
+  font-size: 16px;
+  line-height: 18px;
+  color: @color-darkgrey;
+  text-decoration: none;
+  margin: 22px 0;
+}
