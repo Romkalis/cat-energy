@@ -1,5 +1,16 @@
 .page-header {
-  .indent-adaptive;
+  margin-top: 10px;
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 24px;
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 55px;
+    margin-bottom: 29px;
+  }
 }
 
 .page-header__nav {
@@ -56,6 +67,7 @@
   text-transform: uppercase;
   color: @color-black;
   text-decoration: none;
+  margin-right: 35px;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
@@ -67,6 +79,11 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
+  }
+}
+
+.site-menu__index .site-menu__link {
+  @media (min-width: @desktop-width) {
     color: @color-white;
   }
 }

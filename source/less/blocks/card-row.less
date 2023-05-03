@@ -1,0 +1,37 @@
+.card-row {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 896px;
+  }
+}
+
+.card-row__button {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+  }
+}
+
+.card-row__list {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    // gap: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 288px;
+    // gap: 0;
+  }
+}

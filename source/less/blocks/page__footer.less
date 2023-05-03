@@ -1,12 +1,17 @@
 .page-footer {
-  flex-shrink: 0;
-  .indent-adaptive;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   background-color: @color-lightgrey;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .logo {
@@ -24,6 +29,10 @@
   justify-items: center;
   border-top: 1px solid @color-grey-d9;
   border-bottom: 1px solid @color-grey-d9;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .social__item {
@@ -41,4 +50,12 @@
   color: @color-darkgrey;
   text-decoration: none;
   margin: 22px 0;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.developer__text {
+  margin-right: 22px;
 }
