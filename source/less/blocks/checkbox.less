@@ -1,0 +1,65 @@
+.form-label {
+  position: relative;
+}
+
+.control__input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  // width: 40px;
+  // height: 40px;
+  // outline: 1px solid @color-grey-cd;
+}
+
+.control__input[type="checkbox"] + .check__box {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/check-off.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+//CHECKED
+.control__input[type="checkbox"]:checked + .check__box {
+  background-image: url("../img/check-hover-on.svg");
+}
+
+
+// HOVER
+.control__input[type="checkbox"]:hover + .check__box {
+  background-image: url("../img/check-hover-off.svg");
+}
+
+.control__input[type="checkbox"]:hover:checked + .check__box {
+  background-image: url("../img/check-hover-on.svg");
+}
+
+//DISABLED
+.control__input[type="checkbox"]:disabled + .check__box {
+  background-image: url("../img/check-disable-off.svg");
+}
+
+.control__input[type="checkbox"]:disabled:checked + .check__box {
+  background-image: url("../img/check-disable-on.svg");
+}
+
+//FOCUS
+.control__input[type="checkbox"]:focus + .check__box {
+  background-color: @color-lightgrey;
+}
+
+
+.check__box + .control__lead {
+  padding-left: 45px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
+}

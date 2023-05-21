@@ -1,0 +1,62 @@
+.control__input[type="radio"] {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.control__input[type="radio"] + .radiobutton {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/rb-off.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.control__input[type="radio"]:checked + .radiobutton {
+  background-image: url("../img/rb-on.svg");
+}
+
+//HOVER
+
+.control__input[type="radio"]:checked:hover + .radiobutton {
+  background-image: url("../img/rb-hover-on.svg");
+}
+
+.control__input[type="radio"]:hover + .radiobutton {
+  background-image: url("../img/rb-hover-off.svg");
+}
+
+//DISABLE
+
+.control__input[type="radio"]:disabled + .radiobutton {
+  background-image: url("../img/rb-disable-off.svg");
+}
+
+.control__input[type="radio"]:checked:disabled + .radiobutton {
+  background-image: url("../img/rb-disable-on.svg");
+}
+
+//FOCUS
+
+.control__input[type="radio"]:focus + .radiobutton {
+  background-color: @color-lightgrey;
+  border-radius: 50%;
+}
+
+.radiobutton + .control__lead {
+  display: inline-block;
+  padding-left: 45px;
+  margin-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
+}
+
+

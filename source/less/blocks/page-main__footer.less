@@ -1,5 +1,6 @@
 .contacts {
   text-align: start;
+  position: relative;
 }
 
 .contacts__heading {
@@ -11,11 +12,21 @@
 
 .contacts__header {
   .indent0;
-  .indent-adaptive;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    background: @color-white;
+    width: 405px;
+    height: 86px;
+    padding: 56px 80px;
+    top: 197px;
+    left: 110px;
+    margin: -98px;
+  }
 }
 
 .contacts__text {
