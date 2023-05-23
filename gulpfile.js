@@ -13,6 +13,7 @@ import svgstore from 'gulp-svgstore'; //спрайт для svg
 import browser from 'browser-sync'; // сервер для браузера
 import squoosh from 'gulp-libsquoosh'; // сжатие картинок
 import { deleteAsync } from 'del';
+import message from 'gulp-notify';
 
 // HTML
 
@@ -22,6 +23,7 @@ export const html = () => {
     .pipe(gulp.dest("build"))                       // положи все файлы вот сюда
 };
 
+
 // SCRIPTS
 
 export const scripts = () => {
@@ -30,6 +32,26 @@ export const scripts = () => {
     .pipe(rename('script.min.js'))
     .pipe(gulp.dest('build'))
 };
+
+
+
+// Styles
+
+export const styles = () => {
+  return gulp.src('source/less/style.less', { sourcemaps: true }) //верни результат того что ниже сначала сделав снимок
+    .pipe(plumber({
+      errorHandler: message.onError('Ошибка: <%= error.message %>') // Указывает, что использовать notify для обработки ошибок
+    }))               // работай если есть ошибки
+    .pipe(less())                            // возьми LESS
+    .pipe(postcss([                          // с помощью postcss
+      autoprefixer(),                        // сначала расставь префиксы
+      csso()                                 // минфиицируй
+    ]))
+    .pipe(rename('style.min.css'))           //переименовываем, чтобы обозначить минификацию
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' })) //сделай снимок (мапу)
+    .pipe(browser.stream());                 // обнови браузер
+}
+
 
 //IMAGES
 
@@ -61,6 +83,11 @@ export const sprite = () => {
     .pipe(gulp.dest('build/img/icons'))
 }
 
+//NOTIFY
+
+
+
+
 // Задача COPY - перемещает шрифты, фавиконки и тд
 
 export const copy = (done) => {
@@ -81,21 +108,6 @@ export const clean = () => {
   return deleteAsync('build'); // Укажите путь к папке или файлу, которые хотите удалить
 };
 
-
-// Styles
-
-export const styles = () => {
-  return gulp.src('source/less/style.less', { sourcemaps: true }) //верни результат того что ниже сначала сделав снимок
-    .pipe(plumber())                         // работай если есть ошибки
-    .pipe(less())                            // возьми LESS
-    .pipe(postcss([                          // с помощью postcss
-      autoprefixer(),                        // сначала расставь префиксы
-      csso()                                 // минфиицируй
-    ]))
-    .pipe(rename('style.min.css'))           //переименовываем, чтобы обозначить минификацию
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' })) //сделай снимок (мапу)
-    .pipe(browser.stream());                 // обнови браузер
-}
 
 // Server
 
